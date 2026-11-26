@@ -12,7 +12,7 @@ public partial class MainViewModel : ObservableObject
 {
     [ObservableProperty]
      ObservableCollection<string> items = new ObservableCollection<string>();
-
+    IConnectivity connectivity;
     public MainViewModel()
     {
         Items = new();
@@ -26,6 +26,12 @@ public partial class MainViewModel : ObservableObject
     {
         if(string.IsNullOrWhiteSpace(Text))
             return;
+        
+        if(connectivity.NetworkAccess != NetworkAccess.Internet)
+        {
+            Application.Current.MainPage.DisplayAlert("No Internet", "You are not connected to the internet", "OK");
+            return;
+        }
 
         Items.Add(Text);
         Text = string.Empty;
@@ -37,5 +43,16 @@ public partial class MainViewModel : ObservableObject
         if (Items.Contains(s))
             Items.Remove(s);
 
+    }
+    [RelayCommand]
+    async Task Tap(string s)
+    {
+        if (Items.Contains(s))
+        {
+            await Shell.Current.GoToAsync(nameof(DetailPage), new Dictionary<string, object>
+            {
+                {"item", s}
+            });
+        }
     }
 }
