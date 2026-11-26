@@ -516,3 +516,4 @@ C:\Coding Space\Projects\MAUI-For-Beginners\obj\Debug\net10.0-windows10.0.19041.
 C:\Coding Space\Projects\MAUI-For-Beginners\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt
 C:\Coding Space\Projects\MAUI-For-Beginners\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt.intermediate
 C:\Coding Space\Projects\MAUI-For-Beginners\obj\Debug\net10.0-windows10.0.19041.0\win-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Coding Space\Projects\MAUI-For-Beginners\obj\Debug\net10.0-windows10.0.19041.0\win-x64\MAUI-For-Beginners.sourcelink.json
