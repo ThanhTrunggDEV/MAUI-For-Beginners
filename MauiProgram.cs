@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MAUI_For_Beginners.ViewModel;
+using Microsoft.Extensions.Logging;
 
 namespace MAUI_For_Beginners
 {
@@ -19,6 +20,8 @@ namespace MAUI_For_Beginners
     		builder.Logging.AddDebug();
 #endif
 
+            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<MainViewModel>();
             return builder.Build();
         }
     }
